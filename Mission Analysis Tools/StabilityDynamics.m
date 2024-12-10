@@ -1,4 +1,3 @@
-
 %% Stability Dynamics
 % Calculates gravitational, aerodynamic, and solar radiation pressure torques.
 
