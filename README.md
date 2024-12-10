@@ -1,6 +1,6 @@
-# Space-Flight-AA131 Project
+# Space Flight (AA131) Project
 
-This repository contains MATLAB scripts and modules developed as part of the Space-Flight-AA131 project. The project focuses on orbital mechanics, propulsion systems, and mission analysis for spacecraft design and operation.
+This repository contains MATLAB scripts and modules developed as part of the Space Flight AA131 project. The project focuses on orbital mechanics, propulsion systems, and mission analysis for spacecraft design and operation.
 
 ## Overview
 
