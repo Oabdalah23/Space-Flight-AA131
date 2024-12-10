@@ -1,4 +1,3 @@
-
 # Equations Module for Orbital Mechanics and Propulsion
 
 This folder contains MATLAB implementations of key equations for orbital mechanics, propulsion systems, stability dynamics, and spacecraft design. Each script is modular and focuses on a specific set of calculations.

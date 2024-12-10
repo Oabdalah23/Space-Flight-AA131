@@ -1,4 +1,3 @@
-
 # Mass Regression Analysis
 
 This module performs regression analysis on spacecraft subsystems' mass data to establish relationships between the total dry mass and subsystem masses. 

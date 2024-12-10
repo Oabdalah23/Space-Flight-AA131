@@ -1,4 +1,3 @@
-
 # Keplerian Orbit Propagator
 
 This MATLAB project simulates the propagation of a satellite in Earth orbit using Keplerian orbital elements. It includes additional analyses for satellite eclipse durations and ground station contact times. These tools provide insights into key mission parameters and performance metrics.
