@@ -1,7 +1,7 @@
 
 # Keplerian Orbit Propagator
 
-This MATLAB project simulates the propagation of a satellite in Earth orbit using Keplerian orbital elements. The simulation provides both 2D and 3D visualizations of the satellite's trajectory over a 24-hour period. Additionally, it includes tools for calculating the duration and frequency of satellite eclipses.
+This MATLAB project simulates the propagation of a satellite in Earth orbit using Keplerian orbital elements. It includes additional analyses for satellite eclipse durations and ground station contact times. These tools provide insights into key mission parameters and performance metrics.
 
 ## Features
 
@@ -9,7 +9,8 @@ This MATLAB project simulates the propagation of a satellite in Earth orbit usin
 - Simulates orbital motion using a two-body model with MATLAB's `ode45` solver.
 - Converts ECI coordinates to Earth-Centered Earth-Fixed (ECEF) coordinates and geocentric latitude, longitude, and altitude.
 - Visualizes the satellite's ground track on a 2D map and 3D orbit in both ECI and ECEF frames.
-- **Showcases Eclipse Duration Analysis**: This analysis includes errors due to simplifications in calculations. The correct eclipse duration was verified using Ansys STK, but this implementation is included to demonstrate the approach.
+- **Showcases Eclipse Duration Analysis**: This analysis includes errors due to simplifications. The correct eclipse duration was verified using Ansys STK.
+- **Showcases Ground Contact Analysis**: Calculates satellite line-of-sight (LOS) contact times with a ground station. Simplifications may affect the accuracy of results.
 
 ## Directory Structure
 
@@ -18,6 +19,7 @@ Keplerian-Orbit-Propagator/
 │
 ├── KeplerianOrbitPropagator.m        # Main script for orbit propagation
 ├── EclipseDuration.m                 # Script for eclipse duration and frequency analysis
+├── GroundContact.m                   # Script for ground station contact analysis
 │
 ├── functions/
 │   ├── CAL2GMST.m                   # Converts date to GMST
@@ -26,7 +28,7 @@ Keplerian-Orbit-Propagator/
 │   ├── ECEF2GEOC.m                  # Converts ECEF to geocentric lat/lon/alt
 │   ├── plot2Dmap.m                  # Plots 2D Earth map for ground track
 │   ├── plot3Dbody.m                 # Plots 3D Earth body for visualization
-│   └── Additional functions for Eclipse Duration calculations
+│   └── Additional functions for Eclipse and Ground Contact calculations
 │
 ├── data/
 │   ├── earth2Dmap.png               # Image of 2D Earth map
@@ -70,29 +72,24 @@ Keplerian-Orbit-Propagator/
    - Total duration of satellite eclipses during the mission.
    - Frequency of eclipses (time intervals when the satellite enters Earth's shadow).
 
-### Note on Eclipse Duration
+#### Note on Eclipse Duration
 This analysis includes errors due to simplifications in the calculations. The correct eclipse duration was verified using Ansys STK software. This implementation is included to demonstrate the approach and methodology.
 
-## Orbital Elements
+### Ground Contact Analysis
+1. Open `GroundContact.m` in MATLAB.
+2. Modify the initial satellite and ground station parameters as needed (default uses Kennedy Space Center).
+3. Run the script to calculate:
+   - Total time the satellite has line-of-sight (LOS) contact with the ground station.
+   - Average contact time per orbit period.
+   - Average frequency of contacts.
 
-The script uses revised initial orbital elements for a satellite:
-- Semi-major axis (`a_initial`): 7743.907 km
-- Eccentricity (`e_initial`): 0.085279
-- Inclination (`i_initial`): 151.386209° (in radians)
-- Right Ascension of Ascending Node (`RAAN_initial`): 183.48° (in radians)
-- Argument of Perigee (`omega_initial`): 96.682175° (in radians)
-- True Anomaly (`theta_initial`): 346.297048° (in radians)
-
-## Visualization
-
-- **Ground Track (2D Map):** Plots the satellite's path on a 2D Earth map.
-- **3D ECI Orbit:** Shows the satellite's trajectory in the Earth-Centered Inertial frame.
-- **3D ECEF Orbit:** Visualizes the orbit relative to the rotating Earth.
+#### Note on Ground Contact
+This analysis uses simplified geometric models and may contain errors. It is included to showcase the methodology, while refined tools like Ansys STK are recommended for precise calculations.
 
 ## Dependencies
 
 This project depends on several MATLAB functions and data files:
-- Custom Functions: `CAL2GMST.m`, `OE2ECI.m`, `ECI2ECEF.m`, `ECEF2GEOC.m`, `plot2Dmap.m`, `plot3Dbody.m`, and functions for eclipse calculations.
+- Custom Functions: `CAL2GMST.m`, `OE2ECI.m`, `ECI2ECEF.m`, `ECEF2GEOC.m`, `plot2Dmap.m`, `plot3Dbody.m`, and additional functions for eclipse and ground contact calculations.
 - Data Files: `earth2Dmap.png`, `earthImage.jpg`.
 
 Ensure all required files are present in the respective directories.
