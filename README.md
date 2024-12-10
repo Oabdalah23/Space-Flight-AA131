@@ -15,8 +15,7 @@ This MATLAB project simulates the propagation of a satellite in Earth orbit usin
 ```
 Keplerian-Orbit-Propagator/
 │
-├── main/
-│   └── KeplerianOrbitPropagator.m    # Main script
+├── KeplerianOrbitPropagator.m    # Main script
 │
 ├── functions/
 │   ├── CAL2GMST.m                   # Converts date to GMST
