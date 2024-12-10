@@ -1,4 +1,3 @@
-
 %% Ground Contact Analysis
 % This script calculates the satellite's line-of-sight (LOS) contact time with a ground station.
 
