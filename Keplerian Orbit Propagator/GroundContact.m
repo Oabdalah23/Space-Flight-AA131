@@ -2,6 +2,9 @@
 %% Ground Contact Analysis
 % This script calculates the satellite's line-of-sight (LOS) contact time with a ground station.
 
+% Add functions directory to MATLAB path
+addpath(genpath('functions'));
+
 %% Constants and Initial Setup
 mu = 3.986e5; % km^3/s^2, Gravitational Parameter of Earth
 radiusEarth = 6378; % km
