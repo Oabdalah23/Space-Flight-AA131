@@ -10,6 +10,14 @@ The repository is divided into the following main modules:
 2. **Mass Regression Analysis**: Subsystem mass regression to analyze the relationship between total dry mass and individual subsystem masses.
 3. **Mission Analysis Tools**: Key equations for orbital mechanics, propulsion, stability dynamics, and spacecraft design.
 
+## GPIM Satellite
+
+The Green Propellant Infusion Mission (GPIM) is a NASA satellite designed to demonstrate advanced, environmentally friendly spacecraft propulsion technologies. GPIM uses a green monopropellant, a safer and more efficient alternative to traditional chemical propellants.
+
+![GPIM Satellite](GPIMImage.jpg)
+
+The GPIM project serves as a foundation for our coursework and computational tools developed in this repository.
+
 ## Modules
 
 ### [Keplerian Orbit Propagator](./Keplerian-Orbit-Propagator)
