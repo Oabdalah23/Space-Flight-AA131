@@ -1,7 +1,7 @@
 
 # Keplerian Orbit Propagator
 
-This MATLAB project simulates the propagation of a satellite in Earth orbit using Keplerian orbital elements. The simulation provides both 2D and 3D visualizations of the satellite's trajectory over a 24-hour period.
+This MATLAB project simulates the propagation of a satellite in Earth orbit using Keplerian orbital elements. The simulation provides both 2D and 3D visualizations of the satellite's trajectory over a 24-hour period. Additionally, it includes tools for calculating the duration and frequency of satellite eclipses.
 
 ## Features
 
@@ -9,13 +9,15 @@ This MATLAB project simulates the propagation of a satellite in Earth orbit usin
 - Simulates orbital motion using a two-body model with MATLAB's `ode45` solver.
 - Converts ECI coordinates to Earth-Centered Earth-Fixed (ECEF) coordinates and geocentric latitude, longitude, and altitude.
 - Visualizes the satellite's ground track on a 2D map and 3D orbit in both ECI and ECEF frames.
+- **Showcases Eclipse Duration Analysis**: This analysis includes errors due to simplifications in calculations. The correct eclipse duration was verified using Ansys STK, but this implementation is included to demonstrate the approach.
 
 ## Directory Structure
 
 ```
 Keplerian-Orbit-Propagator/
 │
-├── KeplerianOrbitPropagator.m    # Main script
+├── KeplerianOrbitPropagator.m        # Main script for orbit propagation
+├── EclipseDuration.m                 # Script for eclipse duration and frequency analysis
 │
 ├── functions/
 │   ├── CAL2GMST.m                   # Converts date to GMST
@@ -23,7 +25,8 @@ Keplerian-Orbit-Propagator/
 │   ├── ECI2ECEF.m                   # Converts ECI to ECEF
 │   ├── ECEF2GEOC.m                  # Converts ECEF to geocentric lat/lon/alt
 │   ├── plot2Dmap.m                  # Plots 2D Earth map for ground track
-│   └── plot3Dbody.m                 # Plots 3D Earth body for visualization
+│   ├── plot3Dbody.m                 # Plots 3D Earth body for visualization
+│   └── Additional functions for Eclipse Duration calculations
 │
 ├── data/
 │   ├── earth2Dmap.png               # Image of 2D Earth map
@@ -53,11 +56,22 @@ Keplerian-Orbit-Propagator/
 
 ## Usage
 
+### Keplerian Orbit Propagation
 1. Open `KeplerianOrbitPropagator.m` in MATLAB.
 2. Modify the initial orbital elements and other parameters as needed.
 3. Run the script to generate the following outputs:
    - 2D ground track of the satellite.
    - 3D orbit visualization in the ECI and ECEF frames.
+
+### Eclipse Duration Analysis
+1. Open `EclipseDuration.m` in MATLAB.
+2. Modify the initial conditions and propagation duration as needed.
+3. Run the script to calculate:
+   - Total duration of satellite eclipses during the mission.
+   - Frequency of eclipses (time intervals when the satellite enters Earth's shadow).
+
+### Note on Eclipse Duration
+This analysis includes errors due to simplifications in the calculations. The correct eclipse duration was verified using Ansys STK software. This implementation is included to demonstrate the approach and methodology.
 
 ## Orbital Elements
 
@@ -78,12 +92,12 @@ The script uses revised initial orbital elements for a satellite:
 ## Dependencies
 
 This project depends on several MATLAB functions and data files:
-- Custom Functions: `CAL2GMST.m`, `OE2ECI.m`, `ECI2ECEF.m`, `ECEF2GEOC.m`, `plot2Dmap.m`, `plot3Dbody.m`
-- Data Files: `earth2Dmap.png`, `earthImage.jpg`
+- Custom Functions: `CAL2GMST.m`, `OE2ECI.m`, `ECI2ECEF.m`, `ECEF2GEOC.m`, `plot2Dmap.m`, `plot3Dbody.m`, and functions for eclipse calculations.
+- Data Files: `earth2Dmap.png`, `earthImage.jpg`.
 
 Ensure all required files are present in the respective directories.
 
 ## Acknowledgments
 
 - Developed by Brad Yac-Diaz & Omar Abdallah.
-- Utilized functions provided by AA 131 Instructor, Simone D'Amico (Associate Professor of Aeronautics and Astronautics and, by courtesy, of Geophysics)
+- Utilized functions provided by AA 131 Instructor, Simone D'Amico (Associate Professor of Aeronautics and Astronautics and, by courtesy, of Geophysics).
