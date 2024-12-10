@@ -83,19 +83,7 @@ This project depends on several MATLAB functions and data files:
 
 Ensure all required files are present in the respective directories.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contributing
-
-Contributions are welcome! If you'd like to improve this project, feel free to fork the repository and submit a pull request.
-
 ## Acknowledgments
 
 - Developed by Brad Yac-Diaz & Omar Abdallah.
-- Special thanks to the MATLAB community for supporting tools and resources.
-
-## Contact
-
-For any questions or suggestions, please reach out via GitHub issues or contact [your email address].
+- Utilized functions provided by AA 131 Instructor, Simone D'Amico (Associate Professor of Aeronautics and Astronautics and, by courtesy, of Geophysics)
