@@ -14,7 +14,7 @@ The repository is divided into the following main modules:
 
 The Green Propellant Infusion Mission (GPIM) is a NASA satellite designed to demonstrate advanced, environmentally friendly spacecraft propulsion technologies. GPIM uses a green monopropellant, a safer and more efficient alternative to traditional chemical propellants.
 
-![GPIM Satellite](GPIMImage.jpg)
+<img src="GPIMImage.jpg" alt="GPIM Satellite" width="300"/>
 
 The GPIM project serves as a foundation for our coursework and computational tools developed in this repository.
 
