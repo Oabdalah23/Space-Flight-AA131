@@ -16,7 +16,8 @@ This folder contains MATLAB implementations of key equations for orbital mechani
 ### 2. Delta-V and Propellant Requirements
 - **Delta-V Calculation**:
   \[
-  \Delta v = I_{sp} \cdot g_0 \cdot \ln\left(rac{M_{wet}}{M_{dry}}ight)
+  \Delta v = I_{sp} \cdot g_0 \cdot \ln\left(rac{M_{wet}}{M_{dry}}
+ight)
   \]
 - **Propellant Mass Requirement**:
   Computes the mass of propellant needed for maneuvers and deorbiting.
@@ -33,13 +34,13 @@ This folder contains MATLAB implementations of key equations for orbital mechani
 ## Directory Structure
 
 ```
-equations/
+Mission-Analysis-Tools/
 │
-├── orbital_mechanics.m              # Orbital period, perturbations (RAAN, argument of perigee)
-├── delta_v_propellant.m             # Delta-V and propellant mass requirements
-├── stability_dynamics.m             # Torques and stability dynamics
-├── hohmann_transfer.m               # Hohmann transfer calculations
-├── propellant_tank_design.m         # Tank thickness, mass, and pressurization
+├── OrbitalMechanics.m               # Orbital period, perturbations (RAAN, argument of perigee)
+├── DeltaVPropellant.m               # Delta-V and propellant mass requirements
+├── StabilityDynamics.m              # Torques and stability dynamics
+├── HohmannTransfer.m                # Hohmann transfer calculations
+├── PropellantTankDesign.m           # Tank thickness, mass, and pressurization
 │
 └── README.md                        # Documentation
 ```
@@ -61,23 +62,23 @@ equations/
 
 ## Details of Each Script
 
-### `orbital_mechanics.m`
+### `OrbitalMechanics.m`
 - **Inputs**: Semi-major axis (`a`), eccentricity (`e`), inclination (`i`), gravitational parameter (`mu`).
 - **Outputs**: Orbital period, RAAN precession rate, argument of perigee precession rate, semi-major axis decay, and eccentricity change rate.
 
-### `delta_v_propellant.m`
+### `DeltaVPropellant.m`
 - **Inputs**: Delta-V (`Delta v`), specific impulse (`I_sp`), gravitational constant (`g_0`), wet mass (`M_wet`), dry mass (`M_dry`).
 - **Outputs**: Required delta-V and propellant mass.
 
-### `stability_dynamics.m`
+### `StabilityDynamics.m`
 - **Inputs**: Moments of inertia, gravitational parameter, aerodynamic coefficients, solar radiation pressure parameters.
 - **Outputs**: Stability torque calculations.
 
-### `hohmann_transfer.m`
+### `HohmannTransfer.m`
 - **Inputs**: Parking orbit radius (`r_park`), target orbit radius (`r_target`), gravitational parameter (`mu`).
 - **Outputs**: Transfer orbit parameters and total delta-V.
 
-### `propellant_tank_design.m`
+### `PropellantTankDesign.m`
 - **Inputs**: Tank pressure, material properties, volume, temperature.
 - **Outputs**: Tank thickness, mass, and pressurization details.
 
