@@ -5,6 +5,9 @@
 mu = 3.986e5; % km^3/s^2, Gravitational Parameter of Earth
 radiusEarth = 6378; % km
 
+% Add functions directory to MATLAB path
+addpath(genpath('functions'));
+
 % Launch Date / Time (June 25, 2019, 6:30 UTC)
 GMST = CAL2GMST(2019, 6, 25, (6.5/24)); % Convert to GMST (in Radians)
 
@@ -18,7 +21,7 @@ theta_initial = deg2rad(346.297048); % Similar to original orbit
 
 %% Convert Orbital Elements to ECI Position and Velocity
 OE_Initial2 = [a_initial; e_initial; i_initial; RAAN_initial; omega_initial; theta_initial];
-ECI_posVel_Initial = OE2ECI(OE_Initial, mu);
+ECI_posVel_Initial = OE2ECI(OE_Initial2, mu);
 
 %% Extract Initial Position and Velocity
 ECI_Pos_Initial = ECI_posVel_Initial(1:3);
@@ -56,18 +59,18 @@ end
 
 % 2D Ground Track Map
 figure;
-plot2Dmap('Data/earth2Dmap.png');
+plot2Dmap('data/earth2Dmap.png'); % Updated path for 2D map
 hold on;
 xlim([-180 180]);
 ylim([-90 90]);
-plot(-GEOC_positions(2,:), GEOC_positions(1, :),'.k')
+plot(-GEOC_positions(2,:), GEOC_positions(1,:),'.k');
 title('Satellite Ground Track (24 Hours)');
 xlabel('Longitude (deg)');
 ylabel('Latitude (deg)');
 
 % 3D Satellite Orbit in ECI Frame
 figure;
-plot3Dbody('Data/earthImage.jpg', radiusEarth);
+plot3Dbody('data/earthImage.jpg', radiusEarth); % Updated path for 3D Earth image
 hold on;
 plot3(ECI_positions(1,:), -ECI_positions(2,:), ECI_positions(3,:), 'r-', 'LineWidth', 2);
 xlabel('X (km)');
