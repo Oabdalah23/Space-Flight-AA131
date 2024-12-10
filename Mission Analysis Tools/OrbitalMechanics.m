@@ -1,4 +1,3 @@
-
 %% Orbital Mechanics and Perturbations
 % Calculates orbital period, RAAN precession, argument of perigee precession,
 % semi-major axis decay, and eccentricity change.
