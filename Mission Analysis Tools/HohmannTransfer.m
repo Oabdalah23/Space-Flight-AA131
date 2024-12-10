@@ -1,4 +1,3 @@
-
 %% Hohmann Transfer
 % Calculates the delta-V and orbital parameters for a Hohmann transfer.
 
